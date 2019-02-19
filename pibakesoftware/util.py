@@ -2,6 +2,7 @@
 
 import os
 import sys
+import error
 
 class Utility(object):
     def __init__(self):
@@ -16,5 +17,10 @@ class Utility(object):
 
     @staticmethod
     def is_os_supported(self):
-        if sys.platform != "linux":
-            sys.exit(0)
+        try:
+            if sys.platform != 'linux':
+                raise Exception
+        except Exception as e:
+            print(e)
+            print("Your operating system is not supported. Please email the PiBake Team at:")
+            print("support@pibake.com")

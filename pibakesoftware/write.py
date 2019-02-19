@@ -22,7 +22,7 @@ class Write(object):
             json.dump(self.inputs, data)
 
     def does_file_exist(self):
-        return os.path.exists("export.json")
+        return os.path.exists("exports.json")
 
     def create_file(self):
         os.mknod("exports.json")
