@@ -5,7 +5,7 @@ import sys
 from pibakesoftware import read
 
 is_running = True
-read = read.Read()
+read = read.Read(7, 0)
 
 while is_running:
     # read data

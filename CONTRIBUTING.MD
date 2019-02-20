@@ -14,6 +14,6 @@ All you need is `Python 3.6` and `pip` (and a machine that runs Python, of cours
 - All classes inherit from `object` unless specified
 - All custom exceptions inherit from the base exception
 - All try/except blocks must include the base exception
-- More probably will be included
+- More guidelines probably will be included
 
 
