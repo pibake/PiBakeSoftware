@@ -1,0 +1,6 @@
+# This the requirements file, used for packages we need to import
+# For more info: https://pypi.org/
+
+RPi.GPIO
+paramiko
+grovepi
