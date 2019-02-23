@@ -3,5 +3,4 @@
 
 RPi.GPIO
 paramiko
-PyYAML
-toml
+grovepi

@@ -15,5 +15,8 @@ All you need is `Python 3.6` and `pip` (and a machine that runs Python, of cours
 - All custom exceptions inherit from the base exception
 - All try/except blocks must include the base exception
 - More guidelines probably will be included
+- `import` and `from import` statements must be seperated
+- Argument attributes and initialization attributes must be seperated
+- `if/else/elif` statements should whitespace between them when in a block
 
 

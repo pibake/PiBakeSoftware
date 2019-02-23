@@ -3,11 +3,9 @@
 
 import os
 import json
-import yaml
-import toml
 
 class Write(object):
-    def __init__(self, file, inputs, encoding="json"):
+    def __init__(self, inputs, file="export.json", encoding="json"):
         self.file = file
         self.inputs = inputs
         self.encoding = encoding
@@ -21,8 +19,10 @@ class Write(object):
         with open(self.file, "w") as data:
             json.dump(self.inputs, data)
 
+        return self.file
+
     def does_file_exist(self):
-        return os.path.exists("exports.json")
+        return os.path.exists(self.file)
 
     def create_file(self):
-        os.mknod("exports.json")
+        os.mknod(self.file)
