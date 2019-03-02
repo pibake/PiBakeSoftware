@@ -18,8 +18,9 @@ fn write_to_txt(uuid :Uuid) -> io::Result<()> {
 
     if result == false {
         File::create("./uuid");
-    } else {
         println!("File created!");
+    } else {
+        println!("File already created!");
     }
 
     let uuid_string :String = uuid.to_string();

@@ -1,7 +1,7 @@
 import os
 import time
 import math
-import temperature # pylint: disable=import-error
+#import temperature # pylint: disable=import-error
 import grovepi
 
 class Read(object):
