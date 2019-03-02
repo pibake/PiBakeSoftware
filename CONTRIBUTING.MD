@@ -13,14 +13,17 @@ If you want to help with the core software, `pibakesoftware`, please install the
 If you want to help with the utilities (the only utility that exists right now is `uuid`), please go [Rust's](https://rust-lang.org) website and install Rust. All the tools needed for building, running, and testing Rust is included.
 
 ## Style guidelines
-- All functions and methods are in snake case (i.e. `snake_case`)
-- All classes are in pascal case (i.e. `PascalCase`)
-- All classes inherit from `object` unless specified
-- All custom exceptions inherit from the base exception
-- All try/except blocks must include the base exception
-- More guidelines probably will be included
-- `import` and `from import` statements must be seperated
-- Argument attributes and initialization attributes must be seperated
-- `if/else/elif` statements should whitespace between them when in a block
+- Python style guidelines
+  - All functions and methods are in snake case (i.e. `snake_case`)
+  - All classes are in pascal case (i.e. `PascalCase`)
+  - All classes inherit from `object` unless specified
+  - All custom exceptions inherit from the base exception
+  - All try/except blocks must include the base exception
+  - More guidelines probably will be included
+  - `import` and `from import` statements must be seperated
+  - Argument attributes and initialization attributes must be seperated
+  - `if/else/elif` statements should whitespace between them when in a block
 
-
+- Rust style guidelines
+  - All functions are in snake case (i.e. `snake_case`)
+  - More guidelines probably will included
