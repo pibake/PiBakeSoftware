@@ -2,7 +2,7 @@
 # For more info: https://pypi.org/
 
 RPi.GPIO
-paramiko
+pysftp
 grovepi
 setuptools
 wheel
