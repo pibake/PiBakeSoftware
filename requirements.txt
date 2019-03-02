@@ -4,3 +4,8 @@
 RPi.GPIO
 paramiko
 grovepi
+setuptools
+wheel
+twine
+virtualenv
+pipenv

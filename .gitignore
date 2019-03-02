@@ -1,0 +1,9 @@
+# Files and dirs 
+venv/
+.vscode
+pibakesoftware/__pycache__
+uuid/target
+uuid/uuid
+*.png
+*.json
+.idea/

@@ -1,0 +1,8 @@
+[package]
+name = "uuid"
+version = "0.0.9"
+authors = ["Wyatt J. Miller <mil1159@mai.nmc.edu>"]
+edition = "2018"
+
+[dependencies]
+uuid = { version = '0.7', features = ["v4"] }
