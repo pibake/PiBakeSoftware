@@ -15,9 +15,11 @@ class Write(object):
 
         if result == False:
             self.create_file()
+        else:
+            self.delete_file()
+            self.create_file()
 
-        with open(self.file, "w") as data:
-            json.dump(self.inputs, data)
+        self.to_json(self.inputs.__dict__)
 
         return self.file
 
@@ -26,3 +28,10 @@ class Write(object):
 
     def create_file(self):
         os.mknod(self.file)
+
+    def delete_file(self):
+        os.remove(self.file)
+
+    def to_json(self, inputs):
+        with open(self.file, "w") as data:
+            json.dump(inputs, data)

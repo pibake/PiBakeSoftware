@@ -1,10 +1,8 @@
-# Python file for reading temperature data
-
 import os
 import time
 import math
+import temperature # pylint: disable=import-error
 import grovepi
-# from grovepi_rgb_lcd import *
 
 class Read(object):
     def __init__(self, temp_sensor, humid_sensor):
@@ -23,14 +21,12 @@ class Read(object):
             t = str(temp)
             h = str(hum)
 
-            return t, h
-            #setText_norefresh("Temp:" + t + "C\n" + "Humidity :" + h + "%")
+            result = temperature.Temperature(t, h)
+            return result
 
         except (IOError, TypeError) as e:
             print(str(e))
-            # setText("")
 
         except KeyboardInterrupt as e:
             print(str(e))
-            # setText("")
-
+        
