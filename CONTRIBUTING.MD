@@ -6,7 +6,11 @@ that know some modern Python and a little bit of Linux. Once we get that part bo
 If you are one of those people that are tech savvy, please follow the instructions below!
 
 ## Installation requirements
-All you need is `Python 3.6` and `pip` (and a machine that runs Python, of course). Once you have those installed, go write some code!
+If you want to help with the core software, `pibakesoftware`, please install the following:
+* `Python 3.6`
+* `pip for Python 3`
+
+If you want to help with the utilities (the only utility that exists right now is `uuid`), please go [Rust's](https://rust-lang.org) website and install Rust. All the tools needed for building, running, and testing Rust is included.
 
 ## Style guidelines
 - All functions and methods are in snake case (i.e. `snake_case`)
