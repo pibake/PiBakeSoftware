@@ -1,6 +1,6 @@
 import os
 import sys
-import paramiko
+import pysftp
 
 class Connect(object):
     def __init__(self, file, host, port, username, password, 
@@ -16,12 +16,9 @@ class Connect(object):
     def connect_to_server(self):
         try:
             #result = self.initalize_transaction()
-            transport = paramiko.Transport((self.host, self.port))
-            transport.connect(username=self.username, password=self.password)
-            sftp = paramiko.SFTPClient.from_transport(transport)
-            sftp.put(self.file, self.remote_path)
+            sftp = pysftp.Connection(self.host, port=self.port, username=self.username, password=self.password)
+            sftp.put(self.file)
             sftp.close()
-            transport.close()
             return True
         except Exception as e:
             print("Exception occurred: ".format(e)) # pylint: disable=too-many-format-args
