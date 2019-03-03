@@ -7,5 +7,7 @@ grovepi
 setuptools
 wheel
 twine
+pytest
 virtualenv
 pipenv
+flake8
