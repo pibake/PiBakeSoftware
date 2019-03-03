@@ -1,10 +1,8 @@
-import os
-import time
 import math
-#import temperature # pylint: disable=import-error
 import grovepi
+import temperature
 
-class Read(object):
+class Read:
     def __init__(self, temp_sensor, humid_sensor):
         self.temp_sensor = temp_sensor
         self.humid_sensor = humid_sensor

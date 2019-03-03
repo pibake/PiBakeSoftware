@@ -2,9 +2,8 @@
 
 import os
 import sys
-import error
 
-class Utility(object):
+class Utility:
     def __init__(self):
         pass
 
