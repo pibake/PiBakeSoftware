@@ -1,3 +1,6 @@
+// UUID generation tool
+// Written by Wyatt J. Miller, 2019
+
 extern crate uuid;
 
 use std::fs;

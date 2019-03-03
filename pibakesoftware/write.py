@@ -4,7 +4,7 @@
 import os
 import json
 
-class Write(object):
+class Write:
     def __init__(self, inputs, file="export.json", encoding="json"):
         self.file = file
         self.inputs = inputs

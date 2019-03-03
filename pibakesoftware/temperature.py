@@ -1,7 +1,7 @@
 import time
 import datetime
 
-class Temperature(object):
+class Temperature:
     def __init__(self, temp, humid):
         self.temp = temp
         self.humid = humid
