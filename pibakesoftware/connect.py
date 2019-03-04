@@ -1,8 +1,17 @@
+# 'Connecting to the server' logic 
+# Written by Wyatt J. Miller
+
 import os
 import sys
 import paramiko
 
+'''
+Class for connect to server logic
+'''
 class Connect:
+    '''
+    Constructor
+    '''
     def __init__(self, file, host, port, username, password, local_path, remote_path):
         self.file = file
         self.host = host
@@ -12,6 +21,10 @@ class Connect:
         self.local_path = local_path
         self.remote_path = remote_path
 
+    '''
+    Method to connect via SFTP
+    TODO: Break everything down into separate methods
+    '''
     def connect_to_server(self):
         try:
             transport = paramiko.Transport((self.host, self.password))

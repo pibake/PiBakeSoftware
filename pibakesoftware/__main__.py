@@ -1,4 +1,5 @@
 # Python file for the main loop (and for packaging)
+# Written by Wyatt J. Miller, 2019
 
 import sys
 import time
