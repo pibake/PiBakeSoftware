@@ -5,14 +5,15 @@ import os
 import sys
 import pysftp
 
-'''
-Class for connect to server logic
-'''
 class Connect:
     '''
-    Constructor
+    Class for connect to server logic
     '''
+
     def __init__(self, file, host, port, username, password, local_path):
+        '''
+        Constructor
+        '''
         self.file = file
         self.host = host
         self.port = port
@@ -20,11 +21,11 @@ class Connect:
         self.password = password
         self.local_path = local_path
 
-    '''
-    Method to connect via SFTP
-    TODO: Break everything down into separate methods
-    '''
     def connect_to_server(self):
+        '''
+        Method to connect via SFTP
+        TODO: Break everything down into separate methods
+        '''
         try:
             sftp = pysftp.Connection(self.host, username=self.username, password=self.password)
             sftp.put(self.file)

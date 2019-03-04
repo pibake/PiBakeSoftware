@@ -5,21 +5,23 @@ import math
 import grovepi
 import temperature
 
-'''
-Class to read temperature and humidity off of the Raspberry Pi temperature sensor
-'''
+
 class Read:
     '''
-    Constructor
+    Class to read temperature and humidity off of the Raspberry Pi temperature sensor
     '''
+
     def __init__(self, temp_sensor, humid_sensor):
+        '''
+        Constructor
+        '''
         self.temp_sensor = temp_sensor
         self.humid_sensor = humid_sensor
 
-    '''
-    Method to read temperature and humidity
-    '''
     def read_temperature(self):
+        '''
+        Method to read temperature and humidity
+        '''
         try:
             # store temp and humid in variables
             [temp, hum] = grovepi.dht(self.temp_sensor, self.humid_sensor)

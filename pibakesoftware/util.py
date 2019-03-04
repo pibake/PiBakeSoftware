@@ -4,26 +4,25 @@
 import os
 import sys
 
-'''
-Class for misc. utilities regarding the core software
-'''
-class Utility:
 
-    '''
-    Method for clearing the screen (i.e. Ctrl-L)
-    '''
+class Utility:
+    '''Class for misc. utilities regarding the core software'''
+
     @staticmethod
     def clear_screen(self):
+        '''
+        Method for clearing the screen (i.e. Ctrl-L)
+        '''
         if os.name == "posix":
             os.system("clear")
         if os.name == "nt":
             os.system("cls")
 
-    '''
-    Method to check if the OS is supported
-    '''
     @staticmethod
     def is_os_supported(self):
+        '''
+        Method to check if the OS is supported
+        '''
         try:
             if sys.platform != 'linux':
                 raise Exception

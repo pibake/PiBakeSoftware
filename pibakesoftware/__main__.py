@@ -21,7 +21,7 @@ try:
         file = w.write_to_json()
         con = connect.Connect(file, "thepibake.com", 22, "pibake", "123abc", ".")
         result = con.connect_to_server()
-
+    
         if result == True:
             time.sleep(60)
         else:
