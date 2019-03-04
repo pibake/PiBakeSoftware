@@ -28,5 +28,6 @@ try:
             is_running = False
     else:
         sys.exit(0)
+
 except KeyboardInterrupt:
     print("Keyboard interrupt: manual intervention has been invoked!")
