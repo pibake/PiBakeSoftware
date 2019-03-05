@@ -8,6 +8,7 @@ setuptools
 wheel
 twine
 pytest
+pylint
 virtualenv
 pipenv
 flake8
