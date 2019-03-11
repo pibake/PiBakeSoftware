@@ -12,3 +12,4 @@ pylint
 virtualenv
 pipenv
 flake8
+pdoc

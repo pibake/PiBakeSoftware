@@ -11,7 +11,7 @@ class Temperature:
 
     def __init__(self, temp, humid):
         '''
-        Contructor method
+        Constructor method
         '''
         self.temp = temp
         self.humid = humid
