@@ -3,7 +3,7 @@
 
 import math
 import grovepi
-import temperature
+from . import temperature
 
 
 class Read:

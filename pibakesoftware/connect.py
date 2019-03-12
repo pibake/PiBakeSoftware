@@ -27,7 +27,9 @@ class Connect:
         TODO: Break everything down into separate methods
         '''
         try:
-            sftp = pysftp.Connection(self.host, username=self.username, password=self.password)
+            cnopts = pysftp.CnOpts()
+            cnopts.hostkeys = None
+            sftp = pysftp.Connection(self.host, username=self.username, password=self.password, cnopts=cnopts)
             sftp.put(self.file)
             sftp.close()
             return True
