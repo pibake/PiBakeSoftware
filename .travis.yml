@@ -6,5 +6,14 @@ python:
 install:
   - pip install -r requirements.txt
 
-script:
-  - "pytest ./pibakesoftware/test/test.py"
+before_script:
+  - "sh docs/gen_docs.sh"
+  - "sh docs/gen_diagrams.sh"
+
+deploy:
+  provider: pypi
+  username: "wymillerlinux"
+  password:
+    secure: "nxDOdC0V912bitXXGw4p3gPDanWqRyVxVBKbOV+tJ+3LidQ9x07C6SN0Z2eGebE5o6+dy/mGgos/lkUXWvc8q2ar55FBwJUHdLasyhr0KvkOcQXr3NXIEzOvrWR0zl2AVMiRbsNcDH2eraa87mBRt4pfYe/nEnEgWxQgyyVcp0vXJjhWvW+m1c4imQCmUMW6umOkpN2EPF/xovR/weX8dYSdZBJtTPlVh1jiXkJpJYWPjMpfWT/p8tTHDqfy62Qya30TNGxstL01JPxiiSzdNdxkbw3MvinfwvpeSlRMEvHdxHAbpwA2Aq6TyDk+PU8kDgkCn9TiL1j36u196QVWzWaKwNVDVImWRJt9u8IpAhPXnf/TSyHHQeaLD4MnQo03PjvZNGxeYx4ITRZWAJ3nLhBbCNcFwGyTFBD6wVhwI/Uyq1VC349KXP6mNfWPN21krgcBnitth1q7NV3V2ANLKGA2CzccM6vUSmWt8J6FNjTkYA11eWYAGOh+HIrEdrlUPFR14cxRVMIcXeW7BT9nuHESeKdIcvoLfjMrNnVHiqrcbS2cX2laA8aX3SzgYWof0j3TW+uIE2v83BH/4oub9VkTERYLEtAl9Fdi0HVI/T6MoM8iM8lhMiKfQEy1N22crio3mNo32hX9LD6YSAwznVRwaQMGsBiTnI6TvrVJv/o="
+  on:
+    all_branches: true
