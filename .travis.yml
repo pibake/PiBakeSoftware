@@ -10,6 +10,9 @@ before_install:
 install:
   - pip install -r requirements.txt
 
+script:
+  - "pycompile ./pibakesoftware/"
+
 deploy:
   provider: pypi
   username: "wymillerlinux"
