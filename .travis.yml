@@ -8,11 +8,7 @@ before_install:
   - sudo apt install -y cargo
 
 install:
-  - pip install -r requirements.txt
-
-before_script:
-  - "sh docs/gen_docs.sh"
-  - "sh docs/gen_diagrams.sh"
+  - pip install -r requirements.txt"
 
 deploy:
   provider: pypi
