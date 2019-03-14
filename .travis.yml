@@ -18,5 +18,6 @@ deploy:
   username: "wymillerlinux"
   password:
     secure: "X7VDuv1pJm0NJLIOxLXIYJToJbZM+otozgszKgcB2fMqWzPsHVQJWVHqQLn12YEk9W4aeo+UqW0VNVM3T5lYlOLUqDzpIScT/hFHe4wHbeFHWk9nbNtJiWT046ByFYv127FKkU8oNVSTDHIL+8QBPLKR0qIol61sByny0LB8T4WmA54Pe7GuqTn0fX6M5Zz2WocI/Nt1Ard32K3eqeGwidDP+WTFxKylBplS3qCq+sYKEA63FRtsm3SDcKOl2/Zh0FrwvFl30WhB27fbhWyYrzF9CBw/beTe0e9+jhBgH/IcPyYcbl6x80Pln7CR06AH/68MMhQxkPPXk30QX/hd/66uhjmZBhFtZkXz66wfo9BC219i/d4hFGCnALv+GYVBcJ9avotX8hGiy8WieNW6eMVyJSlhH4mNxDTH8gvO9kgbunNzo0Rtz1SSjVgeaTiHeOHsx4s9ucp0S9ZAgpdVj/l21si33JquT+7kP0LmvnNpImYMZFbe8U4UchWK4HD10eBLP+23p3r5H2bb2kl2BauwtPO63L8ia4/lL0rSpDOqvuBwdtdksBpR9JGw450tH611xfKBhCHMyePa67sfCSfHpW71L2/hxqxTEvncJhcnT016Jm60JR2MwLmtSZpYBWdMjzzb9yWv62bIJW+xdRNqr1I1rP2ulJKr/FjMtLQ="
-  on:
+  distributions: "sdist bdist_wheel"
+    on:
     all_branches: true
