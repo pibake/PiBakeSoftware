@@ -132,17 +132,17 @@ dependencies = [
 
 [[package]]
 name = "uuid"
-version = "0.0.9"
-dependencies = [
- "uuid 0.7.2 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "uuid"
 version = "0.7.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "rand 0.6.5 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "uuid-gen"
+version = "0.0.9"
+dependencies = [
+ "uuid 0.7.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]

@@ -10,14 +10,10 @@ before_install:
 install:
   - pip install -r requirements.txt
 
-script:
-  - "pycompile ./pibakesoftware/"
-
 deploy:
   provider: pypi
-  username: "wymillerlinux"
+  username: "wymiller"
   password:
-    secure: "X7VDuv1pJm0NJLIOxLXIYJToJbZM+otozgszKgcB2fMqWzPsHVQJWVHqQLn12YEk9W4aeo+UqW0VNVM3T5lYlOLUqDzpIScT/hFHe4wHbeFHWk9nbNtJiWT046ByFYv127FKkU8oNVSTDHIL+8QBPLKR0qIol61sByny0LB8T4WmA54Pe7GuqTn0fX6M5Zz2WocI/Nt1Ard32K3eqeGwidDP+WTFxKylBplS3qCq+sYKEA63FRtsm3SDcKOl2/Zh0FrwvFl30WhB27fbhWyYrzF9CBw/beTe0e9+jhBgH/IcPyYcbl6x80Pln7CR06AH/68MMhQxkPPXk30QX/hd/66uhjmZBhFtZkXz66wfo9BC219i/d4hFGCnALv+GYVBcJ9avotX8hGiy8WieNW6eMVyJSlhH4mNxDTH8gvO9kgbunNzo0Rtz1SSjVgeaTiHeOHsx4s9ucp0S9ZAgpdVj/l21si33JquT+7kP0LmvnNpImYMZFbe8U4UchWK4HD10eBLP+23p3r5H2bb2kl2BauwtPO63L8ia4/lL0rSpDOqvuBwdtdksBpR9JGw450tH611xfKBhCHMyePa67sfCSfHpW71L2/hxqxTEvncJhcnT016Jm60JR2MwLmtSZpYBWdMjzzb9yWv62bIJW+xdRNqr1I1rP2ulJKr/FjMtLQ="
-  distributions: "sdist bdist_wheel"
-    on:
-      all_branches: true
+    secret: "ZkTkTCndjsS0RnxnnWvdpOCLzwgK472q+kxYNSBehXZONxyFu6ePRd9wqgPgOSN+aB9XjLuAhvduyfaiTd68RGK3NI5G0uSMKKYdEYvd3sBPNmjVLhKp0CURFydTqUdZMdk2BqGLOCqLS+C3lzUk0ja/8gQnI/PDvczojATV+e2BERO+Ym2B4Y2YQ2D21pZCM5QKXpnxtW3YSwCYJp4zXX91XixidvSYitHdXouBtRfiN3rLSnl0JkYtTR6o1gJzBwjlE8c8d1xrhpLIbOCCRvaO+GSe8nmGt+xymhx8rLl/jFsqJUZDbxmD/Vl39Ngz9OPxVlfK1MfFRzZnguHeAfZN5OyQx9H4FGQq0xzifVLjjYqgAPvybgxA/jtPOpsaXCJbo7wqZN/J6WC4Gms9sY6dvM/ru99w1AcpCIdTLMHj2lBZ2zac114Zgd7HAjnkqjDKUqyRv7haVoCR+2+QU1oBx7l3EwXsrALwHiQzQxmXNdsbtf5GPN3fYX61/FTrMUSmGtT2B96eJwirHi4bYFeoaY+eW+VljDQtNYYMU6o2sc/22wJDtYhzsLb238zQvR8pPLyD3p+VolMqJsnzl6cn0Yy89CzfeM/WCC9gorfAWttP+kHBghMqIWFOJO6WmR9MyWSfGihaA/GxxWX0w5m3g8Lv8AeJh+zN4qpC6wc="
+
+  server: https://test.pypi.org/simple/

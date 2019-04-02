@@ -26,13 +26,18 @@ class Connect:
         Method to connect via SFTP
         TODO: Break everything down into separate methods
         '''
+
+        attempts = 0
+
         try:
             cnopts = pysftp.CnOpts()
             cnopts.hostkeys = None
             sftp = pysftp.Connection(self.host, username=self.username, password=self.password, cnopts=cnopts)
-            sftp.put(self.file)
-            sftp.close()
+
+            result = sftp.put(self.file)
+
             return True
+
         except Exception as e:
             print("Exception occurred: ".format(e)) # pylint: disable=too-many-format-args
 

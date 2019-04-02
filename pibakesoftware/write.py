@@ -2,6 +2,7 @@
 # Written by Wyatt J. Miller, 2019
 
 import os
+import os.path as path
 import json
 
 class Write:
@@ -37,7 +38,7 @@ class Write:
         '''
         Method to check if file exists
         '''
-        return os.path.exists(self.file)
+        return path.exists(self.file)
 
     def create_file(self):
         '''
