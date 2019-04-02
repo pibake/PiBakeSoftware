@@ -52,4 +52,4 @@ class Uuid:
             self.create_file()
             self.write_uuid_file()
         else:
-            self.write_uuid_file()
+            pass
