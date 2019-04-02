@@ -16,7 +16,6 @@ If you want to help with the utilities (the only utility that exists right now i
 - Python style guidelines
   - All functions and methods are in snake case (i.e. `snake_case`)
   - All classes are in pascal case (i.e. `PascalCase`)
-  - All classes inherit from `object` unless specified
   - All custom exceptions inherit from the base exception
   - All try/except blocks must include the base exception
   - More guidelines probably will be included
