@@ -1,11 +1,18 @@
 language: python
+
 python:
 - '3.6'
+
 before_install:
 - sudo apt update
 - sudo apt install -y cargo
+
 install:
 - pip install -r requirements.txt
+
+script:
+  - pytest ./pibakesoftware/test/test.py
+
 deploy:
   provider: pypi
   username: wymiller
