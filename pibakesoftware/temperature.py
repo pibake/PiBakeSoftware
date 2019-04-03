@@ -9,17 +9,17 @@ from . import uuid_gen
 
 class Temperature:
     '''
-    Model class for the temmperature, humidity, and the date and time it was read
+    Model class for the temperature, humidity, and the date and time it was read
     '''
 
-    def __init__(self, temp, humid):
+    def __init__(self, temp_celsius, temp_fahrenheit):
         '''
         Constructor method
         '''
-        self.temp = temp
-        self.humid = humid
+        self.temp_celsius = temp_celsius
+        self.temp_fahrenheit = temp_fahrenheit
 
-        self.time = time.time()
+        self.time = str(datetime.datetime.now().time())
         self.date = str(datetime.date.today())
         self.uuid = self.get_uuid()
 
@@ -27,8 +27,8 @@ class Temperature:
         '''
         Get the current temperature, humidity, time in Epoch, and date; for debugging only
         '''
-        print("Current temperature: ".format(self.temp)) # pylint: disable=too-many-format-args
-        print("Current humidity: ".format(self.humid)) # pylint: disable=too-many-format-args
+        print("Current temperature (C): ".format(self.temp_celsius)) # pylint: disable=too-many-format-args
+        print("Current temperature (F): ".format(self.temp_fahrenheit)) # pylint: disable=too-many-format-args
         print("Time stamped: ".format(self.time)) # pylint: disable=too-many-format-args
         print("Date stamped: ".format(self.date)) # pylint: disable=too-many-format-args
 
@@ -39,17 +39,17 @@ class Temperature:
         '''
         print(datetime.date.today())
 
-    def get_temp(self):
+    def get_temp_celsius(self):
         '''
-        Get the current temperature; for debugging only
+        Get the current temperature in celsius; for debugging only
         '''
-        return self.temp
+        return self.temp_celsius
 
-    def get_humid(self):
+    def get_temp_fahrenheit(self):
         '''
-        Get the current humidity; for debugging only
+        Get the current temperature in fahrenheit; for debugging only
         '''
-        return self.humid
+        return self.temp_fahrenheit
 
     def get_uuid(self):
         uuid = uuid_gen.Uuid()

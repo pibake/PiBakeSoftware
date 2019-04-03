@@ -1,5 +1,7 @@
 # UUID generation tool v2.1 beta Special Edition
 # Written by Wyatt J. Miller, 2019
+#
+# TODO: Needs documentation
 
 import os
 import os.path as path
