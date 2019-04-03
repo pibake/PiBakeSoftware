@@ -1,8 +1,11 @@
 # Model for temperature/humidity reading
 # Written by Wyatt J. Miller
 
+import os
+import os.path
 import time
 import datetime
+from . import uuid_gen
 
 class Temperature:
     '''
@@ -18,6 +21,7 @@ class Temperature:
 
         self.time = str(datetime.datetime.now().time)
         self.date = str(datetime.date.today())
+        self.uuid = self.get_uuid()
 
     def current_reading(self):
         '''
@@ -46,3 +50,9 @@ class Temperature:
         Get the current temperature in fahrenheit; for debugging only
         '''
         return self.temp_fahrenheit
+
+    def get_uuid(self):
+        uuid = uuid_gen.Uuid()
+        result = uuid.read_uuid_file()
+        return result
+

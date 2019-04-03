@@ -18,16 +18,16 @@ fn write_to_txt(uuid :Uuid) {
 
     if result == false {
         fs::File::create("./uuid").expect("Unable to create file!");
-        println!("File created!");
+        //println!("File created!");
     } else {
-        println!("File already created!");
+        //println!("File already created!");
     }
 
     let uuid_string :String = uuid.to_string();
 
     fs::write("./uuid", uuid_string).expect("Unable to write file");
 
-    println!("File written!");
+    //println!("File written!");
 }
 
 fn does_file_exist() -> bool {
