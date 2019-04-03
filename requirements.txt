@@ -3,7 +3,6 @@
 
 RPi.GPIO
 pysftp
-grovepi
 setuptools
 wheel
 twine
