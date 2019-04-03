@@ -19,7 +19,7 @@ class Temperature:
         self.temp_celsius = temp_celsius
         self.temp_fahrenheit = temp_fahrenheit
 
-        self.time = str(datetime.datetime.now().time)
+        self.time = str(datetime.datetime.now().time())
         self.date = str(datetime.date.today())
         self.uuid = self.get_uuid()
 
