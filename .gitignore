@@ -1,8 +1,8 @@
 # Files and dirs 
-venv/
-.vscode/
-pibakesoftware/__pycache__
-pibakesoftware/test/__pycache__
+venv/*
+.vscode/*
+pibakesoftware/__pycache__/*
+pibakesoftware/test/__pycache__/*
 pibakesoftware/html/
 pibakesoftware/*.pyc
 pibakesoftware/test/*.pyc
@@ -11,4 +11,4 @@ uuid/uuid
 *.png
 *.json
 *.txt
-.idea/
+.idea/*
