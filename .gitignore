@@ -11,4 +11,5 @@ uuid/uuid
 *.png
 *.json
 *.txt
+*.html
 /.idea/

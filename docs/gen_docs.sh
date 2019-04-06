@@ -3,12 +3,12 @@
 
 rm -rf pibakesoftware/html
 rm -rf uuid/target
-pdoc --html --overwrite pibakesoftware/__init__.py
-#pdoc --html --overwrite pibakesoftware/__main__.py
-pdoc --html --overwrite pibakesoftware/connect.py
-#pdoc --html --overwrite pibakesoftware/read.py
-pdoc --html --overwrite pibakesoftware/temperature.py
-pdoc --html --overwrite pibakesoftware/write.py
-pdoc --html --overwrite pibakesoftware/util.py
+pydoc -w pibakesoftware
+pydoc -w pibakesoftware.__main__
+pydoc -w pibakesoftware.connect
+pydoc -w pibakesoftware.read
+pydoc -w pibakesoftware.temperature
+pydoc -w pibakesoftware.write
+pydoc -w pibakesoftware.util
 cd uuid
 cargo doc --no-deps

@@ -5,22 +5,22 @@ import sys
 import time
 import uuid
 
-#from . import read
+from . import read
 from . import write
 from . import connect
 from . import temperature
 from . import uuid_gen
 
 is_running = True
-#read = read.Read(7, 0)
+read = read.Read()
 
 try:
     while is_running:
         # read data, write data, connect -> server, repeat
         uuid = uuid_gen.Uuid()
         uuid.does_file_exist()
-        #temp = read.read_temperature()
-        temp = temperature.Temperature(45,56)
+        temp = read.read_temperature()
+        #temp = temperature.Temperature(45,56)
         w = write.Write(temp)
         file = w.write_to_json()
         con = connect.Connect(file, "thepibake.com", 22, "pibake", "123abc", ".")
