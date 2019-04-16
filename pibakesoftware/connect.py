@@ -4,6 +4,7 @@
 import os
 import sys
 import pysftp
+from paramiko import SSHClient, AutoAddPolicy
 
 class Connect:
     '''
@@ -24,17 +25,26 @@ class Connect:
     def connect_to_server(self):
         '''
         Method to connect via SFTP
-        TODO: Break everything down into separate methods
         '''
 
         attempts = 0
 
         try:
+            ssh = SSHClient()
+            ssh.set_missing_host_key_policy(AutoAddPolicy())
+            ssh.load_system_host_keys()
+
             cnopts = pysftp.CnOpts()
             cnopts.hostkeys = None
+            
             sftp = pysftp.Connection(self.host, username=self.username, password=self.password, cnopts=cnopts)
+            sftp.put(self.file)
 
-            result = sftp.put(self.file)
+            ssh.connect(self.host, port=self.port, username=self.username, password=self.password)
+            ssh.exec_command("php import.php")
+            
+            ssh.close()
+            sftp.close()
 
             return True
 
