@@ -2,4 +2,4 @@
 # Written by Wyatt J. Miller, 2019
 
 name = "pibakesoftware"
-author = "Wyatt J. Miller"
+author = "The PiBake Team, Wyatt J. Miller"

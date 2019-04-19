@@ -13,6 +13,7 @@ from . import uuid_gen
 
 is_running = True
 read = read.Read()
+attempts = 0
 
 try:
     while is_running:
@@ -29,7 +30,13 @@ try:
         if result == True:
             time.sleep(60)
         else:
-            is_running = False
+            attempts += 1
+
+            if attempts == 5:
+                is_running = False
+            else:
+                pass
+            
     else:
         sys.exit(0)
 

@@ -1,5 +1,5 @@
 # 'Connecting to the server' logic 
-# Written by Wyatt J. Miller
+# Written by Wyatt J. Miller, 2019
 
 import os
 import sys
@@ -8,12 +8,21 @@ from paramiko import SSHClient, AutoAddPolicy
 
 class Connect:
     '''
+    Synopsis:
     Class for connect to server logic
+
+    Details:
+    The connect class instantiates various attributes relevant to connecting
+    and connects to server through SSH and SFTP
     '''
 
     def __init__(self, file, host, port, username, password, local_path):
         '''
-        Constructor
+        Synopsis:
+        Constructor for the Connect class
+
+        Details:
+        Tells class to instantiate file, host, port, user, password, and local_path attributes
         '''
         self.file = file
         self.host = host
@@ -24,20 +33,28 @@ class Connect:
 
     def connect_to_server(self):
         '''
-        Method to connect via SFTP
-        '''
+        Synopsis:
+        Method to connect via SFTP/SSH
 
-        attempts = 0
+        Details:
+        The SSH and SFTP connection are first closed to make sure that they are closed
+        and then they are open to send data
+        
+        The SSH connection tells the server to import self.file (JSON file) and closes
+        The SFTP connection sends self.file and closes
+        '''
 
         try:
             ssh = SSHClient()
             ssh.set_missing_host_key_policy(AutoAddPolicy())
             ssh.load_system_host_keys()
+            ssh.close()
 
             cnopts = pysftp.CnOpts()
             cnopts.hostkeys = None
             
             sftp = pysftp.Connection(self.host, username=self.username, password=self.password, cnopts=cnopts)
+            sftp.close()
             sftp.put(self.file)
 
             ssh.connect(self.host, port=self.port, username=self.username, password=self.password)
@@ -48,6 +65,7 @@ class Connect:
 
             return True
 
-        except Exception as e:
-            print("Exception occurred: ".format(e)) # pylint: disable=too-many-format-args
+        except Exception:
+            print("Exception occurred, returning false!")
+            return False
 

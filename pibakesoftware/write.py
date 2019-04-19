@@ -7,13 +7,25 @@ import json
 
 class Write:
     '''
+    Synopsis:
     Class to serialize the temperature data
+
+    Details:
+    Class used to serialize (or write) the temperature model to a specified
+    format i.e. JSON. More are soon to come later on i.e. YAML, TOML, etc.
+    Please specify what kind of serialized formats you would like in 
+    PiBakeSoftware's Issues repository.
     '''
 
     def __init__(self, inputs, file="export.json", encoding="json"):
         '''
-        Constructor
+        Synopsis:
+        Writing constructor
+
+        Details:
+        Instantiates the file, input (from temperature model), and encoding attributes
         '''
+
         self.file = file
         self.inputs = inputs
         self.encoding = encoding
@@ -22,6 +34,7 @@ class Write:
         '''
         Method to combine all of the following functions
         '''
+
         result = self.does_file_exist()
 
         if result == False:
@@ -38,23 +51,27 @@ class Write:
         '''
         Method to check if file exists
         '''
+
         return path.exists(self.file)
 
     def create_file(self):
         '''
         Method to create the file attribute
         '''
+
         os.mknod(self.file)
 
     def delete_file(self):
         '''
         Method to delete the file attribute
         '''
+
         os.remove(self.file)
 
     def to_json(self, inputs):
         '''
         Method to write to JSON
         '''
+        
         with open(self.file, "w") as data:
             json.dump(inputs, data)
