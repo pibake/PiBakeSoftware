@@ -67,7 +67,7 @@ class Uuid:
         Text file reading method
         
         Details:
-
+        It's a method that returns a read text file stream
         '''
 
         with open(self.file, "r") as file:
@@ -78,7 +78,12 @@ class Uuid:
 
     def write_uuid_file(self):
         '''
+        Synopsis:
         Text file writing method
+
+        Details:
+        It's a method that writes to already created text file. If
+        something is already in text file, this method will overwrite it as well
         '''
 
         with open(self.file, "w") as file:
@@ -104,14 +109,26 @@ class Uuid:
 
     def create_file(self):
         '''
+        Synopsis:
         Create file method
+        
+        Details:
+        It's a method that takes the file attribute of this
+        class and makes a node (a.k.a a file) of that attribute in
+        the current directory
         '''
 
         os.mknod(self.file)
 
     def does_file_exist(self):
         '''
+        Synopsis:
         Method to check if the file exists
+
+        Details:
+        It's a method that checks if a file is found using the
+        file attribute and takes the result of that and does
+        the appropriate actions.
         '''
 
         result = path.isfile(self.file)

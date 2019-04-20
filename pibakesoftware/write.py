@@ -49,14 +49,26 @@ class Write:
 
     def does_file_exist(self):
         '''
-        Method to check if file exists
+        Synopsis:
+        Method to check if the file exists
+
+        Details:
+        It's a method that checks if a file is found using the
+        file attribute and takes the result of that and does
+        the appropriate actions.
         '''
 
         return path.exists(self.file)
 
     def create_file(self):
         '''
-        Method to create the file attribute
+        Synopsis:
+        Create file method
+        
+        Details:
+        It's a method that takes the file attribute of this
+        class and makes a node (a.k.a a file) of that attribute in
+        the current directory
         '''
 
         os.mknod(self.file)
@@ -72,6 +84,6 @@ class Write:
         '''
         Method to write to JSON
         '''
-        
+
         with open(self.file, "w") as data:
             json.dump(inputs, data)

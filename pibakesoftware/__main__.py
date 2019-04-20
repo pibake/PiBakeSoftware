@@ -1,5 +1,11 @@
 # Python file for the main loop (and for packaging)
 # Written by Wyatt J. Miller, 2019
+#
+#
+# Master TODO list:
+# * Create a common file API
+# * Make the connect_to_server() method less monolithic
+# * Probs more
 
 import sys
 import time

@@ -48,13 +48,11 @@ class Connect:
             ssh = SSHClient()
             ssh.set_missing_host_key_policy(AutoAddPolicy())
             ssh.load_system_host_keys()
-            ssh.close()
 
             cnopts = pysftp.CnOpts()
             cnopts.hostkeys = None
             
             sftp = pysftp.Connection(self.host, username=self.username, password=self.password, cnopts=cnopts)
-            sftp.close()
             sftp.put(self.file)
 
             ssh.connect(self.host, port=self.port, username=self.username, password=self.password)
