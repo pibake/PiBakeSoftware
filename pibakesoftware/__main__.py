@@ -26,7 +26,7 @@ try:
         # read data, write data, connect -> server, repeat
         uuid = uuid_gen.Uuid()
         uuid.does_file_exist()
-        temp = read.read_temperature()
+        temp = read.read_temp()
         #temp = temperature.Temperature(45,56)
         w = write.Write(temp)
         file = w.write_to_json()
