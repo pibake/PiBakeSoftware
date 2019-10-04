@@ -39,7 +39,7 @@ class Connect:
         Details:
         The SSH and SFTP connection are first closed to make sure that they are closed
         and then they are open to send data
-        
+
         The SSH connection tells the server to import self.file (JSON file) and closes
         The SFTP connection sends self.file and closes
         '''
@@ -51,13 +51,13 @@ class Connect:
 
             cnopts = pysftp.CnOpts()
             cnopts.hostkeys = None
-            
+
             sftp = pysftp.Connection(self.host, username=self.username, password=self.password, cnopts=cnopts)
             sftp.put(self.file)
 
             ssh.connect(self.host, port=self.port, username=self.username, password=self.password)
             ssh.exec_command("php import.php")
-            
+
             ssh.close()
             sftp.close()
 

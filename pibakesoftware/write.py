@@ -13,7 +13,7 @@ class Write:
     Details:
     Class used to serialize (or write) the temperature model to a specified
     format i.e. JSON. More are soon to come later on i.e. YAML, TOML, etc.
-    Please specify what kind of serialized formats you would like in 
+    Please specify what kind of serialized formats you would like in
     PiBakeSoftware's Issues repository.
     '''
 
@@ -29,7 +29,7 @@ class Write:
         self.file = file
         self.inputs = inputs
         self.encoding = encoding
- 
+
     def write_to_json(self):
         '''
         Method to combine all of the following functions
@@ -64,7 +64,7 @@ class Write:
         '''
         Synopsis:
         Create file method
-        
+
         Details:
         It's a method that takes the file attribute of this
         class and makes a node (a.k.a a file) of that attribute in

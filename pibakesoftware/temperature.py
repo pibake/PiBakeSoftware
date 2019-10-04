@@ -11,7 +11,7 @@ class Temperature:
     '''
     Synopsis:
     Model class for the temperature, humidity, date, time
-    
+
     Details:
     Class for temperature modelling and other stats needed to be
     inserted into database. This includes celsisus and Fahrenheit temperatures,

@@ -13,7 +13,7 @@ class Uuid:
     '''
     Synopsis:
     Unqiue Universal Identifier generator class
-    
+
     Details:
     A class to solely generate a unique unniversal identifier.
     Generates a new UUID, deploy date, and a file if one has not been created
@@ -53,9 +53,9 @@ class Uuid:
         NOTE: DEPRECATED
 
         Details:
-        Method that generates the deploy date and deploy time 
+        Method that generates the deploy date and deploy time
         based on today's date and time
-        
+
         NOTE: DEPRECATED
         '''
 
@@ -65,7 +65,7 @@ class Uuid:
         '''
         Synopsis:
         Text file reading method
-        
+
         Details:
         It's a method that returns a read text file stream
         '''
@@ -111,7 +111,7 @@ class Uuid:
         '''
         Synopsis:
         Create file method
-        
+
         Details:
         It's a method that takes the file attribute of this
         class and makes a node (a.k.a a file) of that attribute in

@@ -28,5 +28,5 @@ class Utility:
                 raise Exception
         except Exception as e:
             print(e)
-            print("Your operating system is not supported. You must be running Debian in the Raspberry Pi 3+ or better. Please email the PiBake Team at:")
+            print("Your operating system is not supported. You must be running Debian on the Raspberry Pi 3+ or better. Please email the PiBake Team at:")
             print("support@pibake.com")
