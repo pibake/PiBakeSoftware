@@ -6,7 +6,14 @@ authors = ["Wyatt J. Miller <wjmiller2016@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "3.6"
+python = "^3.6"
+RPi.GPIO = "*"
+pysftp = "*"
+setuptools = "*"
+pytest = "*"
+pylint = "*"
+flake8 = "*"
+pdoc = "*"
 
 [tool.poetry.dev-dependencies]
 
