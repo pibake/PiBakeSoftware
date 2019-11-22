@@ -30,7 +30,7 @@ try:
         #temp = temperature.Temperature(45,56)
         w = write.Write(temp)
         file = w.write_to_json()
-        con = connect.Connect(file, "thepibake.com", 22, "pibake", "123abc", ".")
+        con = connect.Connect(file, "thepibake.com", "8000", "/api/temp/create")
         result = con.connect_to_server()
 
         if result == True:
