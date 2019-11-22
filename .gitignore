@@ -14,3 +14,4 @@ uuid/uuid
 *.html
 /.idea/
 *.zip
+export.json
